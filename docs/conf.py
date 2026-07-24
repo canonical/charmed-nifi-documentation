@@ -20,8 +20,7 @@ import textwrap
 #######################
 
 # Project name
-# TODO: Update with the official name of your project or product (e.g., "Ubuntu Server")
-project = "Project"
+project = "Charmed NiFi"
 
 # Author name; used in the default copyright statement in the page footer
 author = "Canonical Ltd."
@@ -60,8 +59,7 @@ html_context = {
     # TODO: To add a tag image, uncomment and update as needed.
     # 'product_tag': '_static/tag.png',
     # Your Discourse instance URL
-    # TODO: Change to your Discourse instance URL or leave empty.
-    "discourse": "",
+    "discourse": "https://discourse.ubuntu.com",
     # Your Mattermost channel URL
     # TODO: Change to your Mattermost channel URL or leave empty.
     "mattermost": "",
@@ -71,10 +69,9 @@ html_context = {
     # Your documentation GitHub repository URL If set, links for viewing the
     # documentation source files and creating GitHub issues are added at the bottom of
     # each page.
-    # TODO: Change to your documentation GitHub repository URL or leave empty.
-    "github_url": "",
+    "github_url": "https://github.com/canonical/charmed-nifi-documentation",
     # Docs branch in the repo; used in links for viewing the source files
-    "repo_default_branch": "main",
+    "repo_default_branch": "track/2.10",
     # Docs location in the repo; used in links for viewing the source files
     "repo_folder": "/docs/",
     # TODO: To enable or disable the Previous / Next buttons at the bottom of pages
@@ -88,12 +85,8 @@ html_context = {
     "author": author,
     # Documentation license information
     "license": {
-        # TODO: Specify your project's license.
-        # For the name, we recommend using the standard shorthand identifier from
-        # https://spdx.org/licenses
-        "name": "",
-        # TODO: Link directly to your project's license statement.
-        "url": "",
+        "name": "GPL-3.0",
+        "url": "https://github.com/canonical/charmed-nifi-documentation/blob/track/2.10/LICENSE",
     },
 }
 
@@ -168,8 +161,8 @@ rediraffe_dir_only = True
 # <first sentence of home page>".
 llms_txt_description = textwrap.dedent(
     """\
-    This is the documentation for the Sphinx Stack, a template repository that helps you
-    set up, build, and publish Sphinx documentation.
+    This is the documentation for Charmed NiFi, a Juju charm for deploying and operating
+    Apache NiFi on Kubernetes.
     """
 )
 

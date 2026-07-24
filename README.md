@@ -1,63 +1,58 @@
-# Sphinx Stack
+# Charmed NiFi documentation
 
-[![Sphinx Stack test](https://github.com/canonical/sphinx-stack/actions/workflows/test-sphinx-stack.yml/badge.svg)](https://github.com/canonical/sphinx-stack/actions/workflows/test-sphinx-stack.yml)
+This repository hosts the source for the Charmed NiFi documentation, built with Sphinx
+and published on Read the Docs.
 
-A standard set of tools for building and publishing Sphinx documentation.
+Charmed NiFi is a Juju charm for deploying and operating [Apache
+NiFi](https://nifi.apache.org/) on Kubernetes.
 
-The Sphinx Stack contains a set of CLI commands and a default set of extensions,
-configuration options, and tests.
+## Build the documentation locally
 
-## Basic usage
-
-To try out the Sphinx Stack, clone it locally and navigate to the `/docs` directory:
+Clone the repository and navigate to the `docs` directory:
 
 ```shell
-git clone git@github.com:canonical/sphinx-stack.git
-cd docs
+git clone git@github.com:canonical/charmed-nifi-documentation.git
+cd charmed-nifi-documentation/docs
 ```
 
-Then, run the command
+Then run:
 
 ```shell
 make run
 ```
 
-This will create a Python virtual environment, install necessary dependencies, build the
-documentation, and serve it to http://127.0.0.1:8000.
+This creates a Python virtual environment, installs the necessary dependencies, builds
+the documentation, and serves it at http://127.0.0.1:8000.
 
-To learn more about how to install and configure the Sphinx Stack for your own project,
-see the [Set up a new
-project](https://canonical-sphinx-stack.readthedocs-hosted.com/latest/set-up-a-new-project/)
-guide in the official documentation.
+Other useful targets:
 
-## Requirements and limitations
-
-The Sphinx Stack is designed for projects hosted on GitHub. This is necessary to run the
-automatic checks in .github/workflows, and to publish your documentation on Read the
-Docs.
-
-If you have a project that is hosted on a different versioning platform, like Launchpad,
-[reach out to us](#reach-out).
+```shell
+make html        # build the HTML output
+make spelling    # check spelling
+make linkcheck   # check for broken links
+make woke        # check for non-inclusive language
+```
 
 ## Community and support
 
-The Sphinx Stack is an open-source project that warmly welcomes community involvement.
+Charmed NiFi is an open-source project that warmly welcomes community involvement.
 
-If you’re new to the community, make sure to read through the [Ubuntu Code of
+If you're new to the community, read through the [Ubuntu Code of
 Conduct](https://ubuntu.com/community/code-of-conduct) first.
 
 ### Reach out
 
 * Report an issue or make a suggestion via
-  [GitHub](https://github.com/canonical/sphinx-stack/issues)
+  [GitHub](https://github.com/canonical/charmed-nifi-documentation/issues)
 * Come chat with the Canonical Documentation team in our [public Matrix
   channel](https://matrix.to/#/#documentation:ubuntu.com)
 
 ### Contribute
 
-The Sphinx Stack provides a shared foundation for Sphinx documentation projects, and
-contributions help improve the documentation of all its users.
+* See [CONTRIBUTING.md](CONTRIBUTING.md) for details on contributing to the
+  documentation.
+* Check the [open issues](https://github.com/canonical/charmed-nifi-documentation/issues).
 
-* See [CONTRIBUTING.md](CONTRIBUTING.md) for more details on contributing to
-  development or documentation.
-* Check [open issues](https://github.com/canonical/sphinx-stack/issues)
+## License
+
+The Charmed NiFi documentation is licensed under the [GPL-3.0 License](LICENSE).
