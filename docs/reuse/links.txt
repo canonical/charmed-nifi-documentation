@@ -1,0 +1,6 @@
+.. _Apache NiFi: https://nifi.apache.org/
+.. _Apache NiFi documentation: https://nifi.apache.org/documentation/
+.. _Juju: https://juju.is/
+.. _Ubuntu Code of Conduct: https://ubuntu.com/community/code-of-conduct
+.. _Charmed NiFi on GitHub: https://github.com/canonical/nifi-k8s-operator
+.. _Documentation repository: https://github.com/canonical/charmed-nifi-documentation

@@ -249,9 +249,12 @@ exclude_patterns = [
 #     "https://assets.ubuntu.com/v1/287a5e8f-bundle.js",
 # ]
 
-# Appends extra markup to the end of every document written in reST
-# rst_epilog = """
-# """
+# Appends extra markup to the end of every document written in reST.
+# Centralised external links live in reuse/links.txt so each page can use named
+# references (e.g. `Juju`_) instead of repeating URLs inline.
+rst_epilog = """
+.. include:: /reuse/links.txt
+"""
 
 # Feedback button at the top; enabled by default
 # TODO: Disable the button if your project is unsuitable for public feedback.

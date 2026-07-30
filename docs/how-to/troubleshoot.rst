@@ -1,6 +1,4 @@
-.. _release-notes:
-
-Release notes
-=============
+Troubleshoot
+============
 
 .. Placeholder page. Content added in a later PR.

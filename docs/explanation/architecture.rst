@@ -1,6 +1,4 @@
-.. _release-notes:
-
-Release notes
-=============
+Architecture overview
+=====================
 
 .. Placeholder page. Content added in a later PR.

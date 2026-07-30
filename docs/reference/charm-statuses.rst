@@ -1,6 +1,4 @@
-.. _release-notes:
-
-Release notes
-=============
+Charm statuses
+==============
 
 .. Placeholder page. Content added in a later PR.
