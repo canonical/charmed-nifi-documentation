@@ -1,6 +1,0 @@
-.. _release-notes:
-
-Release notes
-=============
-
-.. Placeholder page. Content added in a later PR.
