@@ -22,11 +22,3 @@ What you need
 * At least **4 GB of free RAM** and **60 GB of free disk** (NiFi keeps three data
   stores on disk; see :doc:`/explanation/architecture`).
 * A terminal and an internet connection.
-
-Follow the two parts in order:
-
-.. toctree::
-   :maxdepth: 1
-
-   deploy-charmed-nifi
-   build-your-first-flow

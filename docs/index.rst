@@ -14,8 +14,7 @@ hand-editing config files.
 
    This is an early **edge** release of a **single-node** deployment, built for
    **amd64**. It is not yet production-ready: there is no clustering or high
-   availability, and the web UI is served over plain HTTP with no login. See
-   :doc:`reference/known-limitations`.
+   availability, and the web UI is served over plain HTTP with no login.
 
 ----
 
@@ -59,7 +58,6 @@ suggestions, fixes, and feedback.
 * Read the `Ubuntu Code of Conduct`_
 * Find the charm source on `GitHub <Charmed NiFi on GitHub_>`_
 * Browse the `Apache NiFi documentation`_
-* :doc:`Contribute to these docs <contribute/index>`
 
 .. toctree::
     :hidden:
@@ -69,10 +67,3 @@ suggestions, fixes, and feedback.
     how-to/index
     reference/index
     explanation/index
-
-.. toctree::
-    :hidden:
-    :maxdepth: 1
-
-    release-notes/index
-    contribute/index
