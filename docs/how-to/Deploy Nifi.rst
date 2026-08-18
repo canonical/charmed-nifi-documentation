@@ -19,7 +19,7 @@ Deploy the NiFi charm
 
 .. code-block:: bash
 
-   juju deploy nifi-k8s --trust
+   juju deploy nifi-k8s --channel 2.10/edge
 
 Configure the sensitive properties key
 ---------------------------------------
@@ -63,6 +63,10 @@ The NiFi web UI (the *canvas*) is served on port **8080**:
    juju status --format=json | jq -r '.applications["nifi-k8s"].units[]."address"'
 
 Open ``http://<unit-ip>:8080/nifi/`` in your browser.
+
+.. image:: ../images/nifi-ui.png
+   :alt: NiFi UI Login
+   :align: center
 
 .. note::
 
