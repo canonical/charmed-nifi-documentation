@@ -5,3 +5,4 @@
 .. _Charmed NiFi on GitHub: https://github.com/canonical/nifi-k8s-operator
 .. _Documentation repository: https://github.com/canonical/charmed-nifi-documentation
 .. _Git Integrator: https://charmhub.io/git-integrator
+.. _Set up your Juju deployment: https://documentation.ubuntu.com/juju/3.6/howto/manage-your-juju-deployment/set-up-your-juju-deployment-local-testing-and-development/
