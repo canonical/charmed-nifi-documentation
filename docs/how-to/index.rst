@@ -9,4 +9,4 @@ are new to Charmed NiFi, start with the :doc:`tutorial </tutorials/index>` first
 .. toctree::
    :maxdepth: 1
 
-   Deploy Nifi
+   deploy
