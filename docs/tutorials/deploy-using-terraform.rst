@@ -11,7 +11,7 @@ Prerequisites
 -------------
 
 * A Juju controller (v3.6+) bootstrapped on a Kubernetes cluster.
-  See the :doc:`deploy guide </how-to/Deploy Nifi>` for setup instructions.
+  See the :doc:`deploy guide </how-to/deploy>` for setup instructions.
 * `Terraform CLI`_ (v1.12+).
 
 Clone the Charmed NiFi Solutions repository
@@ -27,6 +27,12 @@ module:
 
 Deploy
 ------
+
+Create a Juju model:
+
+.. code-block:: bash
+
+   juju add-model nifi
 
 NiFi uses a *sensitive properties key* to encrypt passwords stored in flow
 definitions. The Terraform module creates a Juju secret from this value,
@@ -120,7 +126,4 @@ Next steps
 
 * Explore the `Charmed NiFi Solutions`_ repository for more information.
 
-.. _Terraform: https://www.terraform.io/
-.. _Juju Terraform Provider: https://registry.terraform.io/providers/juju/juju/latest/docs
-.. _Terraform CLI: https://developer.hashicorp.com/terraform/install
-.. _Charmed NiFi Solutions: https://github.com/canonical/charmed-nifi-solutions/tree/main/modules/charmed-nifi/README.md
+

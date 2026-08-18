@@ -4,3 +4,7 @@
 .. _Ubuntu Code of Conduct: https://ubuntu.com/community/code-of-conduct
 .. _Charmed NiFi on GitHub: https://github.com/canonical/nifi-k8s-operator
 .. _Documentation repository: https://github.com/canonical/charmed-nifi-documentation
+.. _Terraform: https://www.terraform.io/
+.. _Juju Terraform Provider: https://registry.terraform.io/providers/juju/juju/latest/docs
+.. _Terraform CLI: https://developer.hashicorp.com/terraform/install
+.. _Charmed NiFi Solutions: https://github.com/canonical/charmed-nifi-solutions/tree/main/modules/charmed-nifi/README.md
