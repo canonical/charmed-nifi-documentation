@@ -10,4 +10,4 @@ are new to Charmed NiFi, start with the :doc:`tutorial </tutorials/index>` first
    :maxdepth: 1
 
    Deploy Nifi
-   Integrate/index
+   integrate/index

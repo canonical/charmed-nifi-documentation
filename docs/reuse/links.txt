@@ -4,3 +4,4 @@
 .. _Ubuntu Code of Conduct: https://ubuntu.com/community/code-of-conduct
 .. _Charmed NiFi on GitHub: https://github.com/canonical/nifi-k8s-operator
 .. _Documentation repository: https://github.com/canonical/charmed-nifi-documentation
+.. _Git Integrator: https://charmhub.io/git-integrator

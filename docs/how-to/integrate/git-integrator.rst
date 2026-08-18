@@ -48,7 +48,7 @@ To track a specific branch (default is ``main``):
 
 .. code-block:: bash
 
-   juju add-secret git-pat credentials_personal_access_token="<your-token>"
+   juju add-secret git-pat credentials-personal-access-token="<your-token>"
    juju grant-secret git-pat git-integrator
    juju config git-integrator \
      authentication_method="credentials" \
@@ -87,4 +87,4 @@ Remove the integration
 
    juju remove-relation git-integrator:git nifi-k8s:git-registry
 
-.. _Git Integrator: https://charmhub.io/git-integrator
+
