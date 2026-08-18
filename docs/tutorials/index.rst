@@ -26,4 +26,4 @@ What you need
 .. toctree::
   :maxdepth: 1
 
-  Deploy Nifi using Terraform
+  deploy-using-terraform
