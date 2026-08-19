@@ -20,5 +20,5 @@ What you need
 
 * A Linux machine (Ubuntu recommended) on **amd64**.
 * At least **4 GB of free RAM** and **60 GB of free disk** (NiFi keeps three data
-  stores on disk; see :doc:`/explanation/architecture`).
+  stores on disk.
 * A terminal and an internet connection.
