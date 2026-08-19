@@ -22,3 +22,8 @@ What you need
 * At least **4 GB of free RAM** and **60 GB of free disk** (NiFi keeps three data
   stores on disk.
 * A terminal and an internet connection.
+
+.. toctree::
+  :maxdepth: 1
+
+  deploy-using-terraform
