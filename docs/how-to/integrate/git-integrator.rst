@@ -20,7 +20,7 @@ Prerequisites
 -------------
 
 A running Charmed NiFi deployment. If you haven't deployed it yet, follow the
-:doc:`deploy guide </how-to/Deploy Nifi>` first.
+:doc:`deploy guide </how-to/deploy>` first.
 
 Deploy the Git Integrator charm
 --------------------------------
