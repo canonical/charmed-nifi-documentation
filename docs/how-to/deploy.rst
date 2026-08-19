@@ -8,18 +8,23 @@ This guide walks you through deploying Charmed NiFi on Kubernetes using Juju.
 Prerequisites
 -------------
 
-* Ubuntu 26.04 (or later).
-* A K8s cluster (v1.32+) with a Juju controller bootstrapped on it.
+* A K8s cluster (v1.32+) with a Juju controller (v3.6+) bootstrapped on it.
 
   See `Set up your Juju deployment`_
   for a step-by-step guide.
+
+* ``jq`` installed (used to retrieve the unit IP):
+
+  .. code-block:: bash
+
+     sudo apt-get install -y jq
 
 Deploy the NiFi charm
 ---------------------
 
 .. code-block:: bash
 
-   juju deploy nifi-k8s --trust
+   juju deploy nifi-k8s --channel 2.10/edge
 
 Configure the sensitive properties key
 ---------------------------------------
@@ -66,6 +71,15 @@ Open ``http://<unit-ip>:8080/nifi/`` in your browser.
 
 .. note::
 
+   This works directly on MicroK8s. On other clusters, use
+   ``kubectl port-forward`` to reach the unit.
+
+.. image:: ../images/nifi-ui.png
+   :alt: NiFi Canvas
+   :align: center
+
+.. note::
+
    The current edge release serves the UI over plain HTTP with no login.
 
 Next steps
@@ -73,4 +87,4 @@ Next steps
 
 * :doc:`/how-to/index` for more task-oriented guides.
 
-.. _Set up your Juju deployment: https://documentation.ubuntu.com/juju/3.6/howto/manage-your-juju-deployment/set-up-your-juju-deployment-local-testing-and-development/
+

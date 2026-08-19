@@ -8,3 +8,5 @@
 .. _Juju Terraform Provider: https://registry.terraform.io/providers/juju/juju/latest/docs
 .. _Terraform CLI: https://developer.hashicorp.com/terraform/install
 .. _Charmed NiFi Solutions: https://github.com/canonical/charmed-nifi-solutions/tree/main/modules/charmed-nifi/README.md
+.. _Git Integrator: https://charmhub.io/git-integrator
+.. _Set up your Juju deployment: https://documentation.ubuntu.com/juju/3.6/howto/manage-your-juju-deployment/set-up-your-juju-deployment-local-testing-and-development/
