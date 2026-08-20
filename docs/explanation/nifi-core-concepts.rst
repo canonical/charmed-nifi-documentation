@@ -15,11 +15,11 @@ FlowFile
 
 A FlowFile is the unit of data in NiFi. It has two parts:
 
-* **Attributes** — key/value metadata (filename, MIME type, timestamps, custom fields)
-* **Content** — the payload (a file, a JSON document, a database row, etc.)
+* **Attributes:** key/value metadata (filename, MIME type, timestamps, custom fields)
+* **Content:** the payload (a file, a JSON document, a database row, etc.)
 
 .. image:: ../images/flowfile-anatomy.png
-   :alt: Anatomy of a FlowFile — attributes and content
+   :alt: Anatomy of a FlowFile - attributes and content
    :align: center
 
 Every piece of data that moves through a flow is a FlowFile.
@@ -33,8 +33,8 @@ endpoints, transforming records, writing to databases, and more.
 
 Each processor has:
 
-* **Properties** — configuration specific to that processor
-* **Relationships** — named outputs (*success*, *failure*, *retry*, etc.) that
+* **Properties:** configuration specific to that processor
+* **Relationships:** named outputs (*success*, *failure*, *retry*, etc.) that
   route FlowFiles to the next step
 
 Connection
