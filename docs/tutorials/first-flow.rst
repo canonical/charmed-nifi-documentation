@@ -27,15 +27,12 @@ What you'll do
 Open the NiFi canvas
 --------------------
 
-Retrieve the NiFi unit IP:
+Open the NiFi web UI in your browser. You can reach it via the unit IP
+(``http://<unit-ip>:8080/nifi/``) or through an ingress URL if you have one
+configured. See the :doc:`deploy guide <deploy-using-terraform>` for details
+on accessing the UI.
 
-.. code-block:: bash
-
-   juju status --format=json \
-     | jq -r '.applications["nifi-k8s"].units[]."address"'
-
-Open ``http://<unit-ip>:8080/nifi/`` in your browser. You should see the
-empty canvas.
+You should see the empty canvas.
 
 .. image:: ../images/nifi-ui.png
    :alt: Empty NiFi canvas
