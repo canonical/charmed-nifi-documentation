@@ -15,8 +15,12 @@ FlowFile
 
 A FlowFile is the unit of data in NiFi. It has two parts:
 
-* **Content** — the payload (a file, a JSON document, a database row, etc.)
 * **Attributes** — key/value metadata (filename, MIME type, timestamps, custom fields)
+* **Content** — the payload (a file, a JSON document, a database row, etc.)
+
+.. image:: ../images/flowfile-anatomy.png
+   :alt: Anatomy of a FlowFile — attributes and content
+   :align: center
 
 Every piece of data that moves through a flow is a FlowFile.
 
@@ -39,6 +43,10 @@ Connection
 A Connection links one processor's relationship to the next processor. It acts
 as a queue, holding FlowFiles until the downstream processor is ready to
 consume them.
+
+.. image:: ../images/flow-concept.png
+   :alt: A Processor connected to another Processor via a Connection queue
+   :align: center
 
 Process Group
 -------------
@@ -64,5 +72,4 @@ repository and restore or promote them across environments.
 Charmed NiFi sets up a Flow Registry Client automatically when you integrate
 with the `git-integrator`_ charm.
 
-.. _Apache NiFi: https://nifi.apache.org/
-.. _git-integrator: https://charmhub.io/git-integrator
+
