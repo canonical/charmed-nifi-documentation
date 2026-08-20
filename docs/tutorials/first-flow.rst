@@ -126,6 +126,6 @@ The canvas is now empty and NiFi is idle.
 Next steps
 ----------
 
-* :doc:`/explanation/nifi-core-concepts` — understand the concepts behind
+* :doc:`/explanation/nifi-core-concepts` - understand the concepts behind
   what you just built.
 * Read the `Apache NiFi documentation`_ for the full processor catalogue.
