@@ -13,7 +13,7 @@ What Charmed NiFi adds
 
 **Day-0 deployment**
    A single ``juju deploy nifi-k8s`` command (or a Terraform module) is enough
-   to run NiFi on Kubernetes — no Helm charts, no hand-editing of
+   to run NiFi on Kubernetes. No Helm charts, no hand-editing of
    ``nifi.properties``.
 
 **Declarative configuration**
@@ -22,7 +22,7 @@ What Charmed NiFi adds
    NiFi only when the rendered file actually changes.
 
 **Persistent storage**
-   Juju provisions and mounts three persistent volumes automatically —
+   Juju provisions and mounts three persistent volumes automatically:
    ``nifi-data`` (flow metadata), ``content`` (FlowFile bytes), and
    ``provenance`` (audit trail). They survive pod restarts without manual
    ``PersistentVolumeClaim`` management.
@@ -30,7 +30,7 @@ What Charmed NiFi adds
 **Relation-driven integrations**
    Connecting NiFi to a Git repository or an ingress provider is a single
    ``juju integrate`` command. The charm reads the relation data and updates
-   ``nifi.properties`` accordingly — no manual Registry Client setup required.
+   ``nifi.properties`` accordingly, no manual Registry Client setup required.
 
 **Lifecycle management**
    Pebble manages the NiFi JVM process inside the container and exposes a
