@@ -9,4 +9,5 @@ is built the way it is.
 .. toctree::
    :maxdepth: 1
 
+   architecture-overview
    nifi-core-concepts
