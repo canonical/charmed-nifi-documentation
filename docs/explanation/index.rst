@@ -11,3 +11,4 @@ is built the way it is.
 
    architecture-overview
    charmed-vs-upstream
+   nifi-core-concepts
