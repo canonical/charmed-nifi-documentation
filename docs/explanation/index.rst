@@ -10,3 +10,4 @@ is built the way it is.
    :maxdepth: 1
 
    architecture-overview
+   nifi-core-concepts
