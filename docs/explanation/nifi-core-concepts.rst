@@ -70,6 +70,6 @@ A Flow Registry Client connects NiFi to an external version-control system
 repository and restore or promote them across environments.
 
 Charmed NiFi sets up a Flow Registry Client automatically when you integrate
-with the `git-integrator`_ charm.
+with the `Git Integrator`_ charm.
 
 
