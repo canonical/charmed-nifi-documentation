@@ -1,14 +1,14 @@
 .. _explanation-charmed-vs-upstream:
 
-Charmed NiFi vs upstream NiFi
+Charmed Apache NiFi vs upstream NiFi
 ==============================
 
 `Apache NiFi`_ is an open-source project maintained by the Apache Software
-Foundation. Charmed NiFi packages it as a `Juju`_ charm for Kubernetes, adding
-operational tooling on top. This page explains what Charmed NiFi adds and
+Foundation. Charmed Apache NiFi packages it as a `Juju`_ charm for Kubernetes, adding
+operational tooling on top. This page explains what Charmed Apache NiFi adds and
 what it intentionally leaves unchanged.
 
-What Charmed NiFi adds
+What Charmed Apache Nifi adds
 -----------------------
 
 **Day-0 deployment**
@@ -39,9 +39,8 @@ What Charmed NiFi adds
 What stays the same
 --------------------
 
-Charmed NiFi does not modify NiFi itself. The OCI image ships the upstream
-NiFi binary unchanged. The canvas, the processor catalogue, the REST API, and
-all NiFi configuration semantics are identical to upstream.
+The canvas, the processor catalogue, the REST API, and all Apache NiFi
+configuration semantics are identical to upstream.
 
 Sensitive properties key
 -------------------------
@@ -51,8 +50,8 @@ controller service passwords, etc.) using a *sensitive properties key*. This
 key is set via ``nifi.sensitive.props.key`` in ``nifi.properties``.
 
 In upstream NiFi you set this key directly in the configuration file. In
-Charmed NiFi the key is stored as a `Juju secret`_ and passed to the charm via
-the ``sensitive-props-key`` config option, so it is never written to disk in
+In upstream NiFi you set this key directly in the configuration file. In
+Charmed Apache NiFi the key is stored as a `Juju secret`_ and passed to the charm via
 plain text or exposed in Juju model state.
 
 **Key rotation is supported.** When you add a new revision to the Juju secret,
