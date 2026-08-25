@@ -59,6 +59,13 @@ suggestions, fixes, and feedback.
 * Find the charm source on `GitHub <Charmed NiFi on GitHub_>`_
 * Browse the `Apache NiFi documentation`_
 
+License and trademarks
+----------------------
+
+Apache®, Apache NiFi, NiFi™, and their respective logos are either registered
+trademarks or trademarks of the Apache Software Foundation in the United States
+and/or other countries.
+
 .. toctree::
     :hidden:
     :maxdepth: 1
