@@ -50,7 +50,6 @@ controller service passwords, etc.) using a *sensitive properties key*. This
 key is set via ``nifi.sensitive.props.key`` in ``nifi.properties``.
 
 In upstream NiFi you set this key directly in the configuration file. In
-In upstream NiFi you set this key directly in the configuration file. In
 Charmed Apache NiFi the key is stored as a `Juju secret`_ and passed to the charm via
 plain text or exposed in Juju model state.
 
