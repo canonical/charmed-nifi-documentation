@@ -1,25 +1,25 @@
 .. _explanation-charmed-vs-upstream:
 
-Charmed Apache NiFi vs upstream NiFi
-==============================
+Charmed Apache NiFi vs upstream Apache NiFi
+===========================================
 
 `Apache NiFi`_ is an open-source project maintained by the Apache Software
 Foundation. Charmed Apache NiFi packages it as a `Juju`_ charm for Kubernetes, adding
 operational tooling on top. This page explains what Charmed Apache NiFi adds and
 what it intentionally leaves unchanged.
 
-What Charmed Apache Nifi adds
------------------------
+What Charmed Apache NiFi adds
+-----------------------------
 
 **Day-0 deployment**
    A single ``juju deploy nifi-k8s`` command (or a Terraform module) is enough
-   to run NiFi on Kubernetes. No Helm charts, no hand-editing of
+   to run Apache NiFi on Kubernetes. No Helm charts, no hand-editing of
    ``nifi.properties``.
 
 **Declarative configuration**
    Juju config options (such as the sensitive properties key) are passed in as
    Juju secrets. The charm writes them into ``nifi.properties`` and restarts
-   NiFi only when the rendered file actually changes.
+   Apache NiFi only when the rendered file actually changes.
 
 **Persistent storage**
    Juju provisions and mounts three persistent volumes automatically:
@@ -28,12 +28,12 @@ What Charmed Apache Nifi adds
    ``PersistentVolumeClaim`` management.
 
 **Relation-driven integrations**
-   Connecting NiFi to a Git repository or an ingress provider is a single
+   Connecting Apache NiFi to a Git repository or an ingress provider is a single
    ``juju integrate`` command. The charm reads the relation data and updates
    ``nifi.properties`` accordingly, no manual Registry Client setup required.
 
 **Lifecycle management**
-   Pebble manages the NiFi JVM process inside the container and exposes a
+   Pebble manages the Apache NiFi JVM process inside the container and exposes a
    health check. Juju monitors it and re-starts it if it exits unexpectedly.
 
 What stays the same
@@ -41,43 +41,3 @@ What stays the same
 
 The canvas, the processor catalogue, the REST API, and all Apache NiFi
 configuration semantics are identical to upstream.
-
-Sensitive properties key
--------------------------
-
-NiFi encrypts passwords stored inside flow definitions (connection credentials,
-controller service passwords, etc.) using a *sensitive properties key*. This
-key is set via ``nifi.sensitive.props.key`` in ``nifi.properties``.
-
-In upstream NiFi you set this key directly in the configuration file. In
-Charmed Apache NiFi the key is stored as a `Juju secret`_ and passed to the charm via
-plain text or exposed in Juju model state.
-
-**Key rotation is supported.** When you add a new revision to the Juju secret,
-the charm:
-
-1. Stops NiFi.
-2. Runs ``nifi.sh set-sensitive-properties-key <new-key>``, which re-encrypts
-   all existing sensitive values in the flow with the new key.
-3. Writes the updated ``nifi.properties``.
-4. Restarts NiFi.
-
-To rotate the key:
-
-.. code-block:: bash
-
-   juju secret set <secret-id> sensitive-props-key="<new-key>"
-
-NiFi will restart automatically once the charm picks up the secret revision
-change.
-
-Requirements for the key:
-
-* Must be at least **12 characters** long (32 recommended).
-* Must be provided as a Juju user secret exposing the field
-  ``sensitive-props-key``.
-* The charm enters ``BlockedStatus`` and will not start NiFi until the key is
-  configured.
-
-See :doc:`/how-to/deploy` for the exact commands to create and configure the
-secret.
