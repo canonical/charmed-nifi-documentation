@@ -3,7 +3,7 @@
 How-to guides
 =============
 
-Practical, task-focused recipes for people who already know the basics. If youare new to Charmed Apache Nifi, start with the :doc:`tutorial </tutorials/index>` first.
+Practical, task-focused recipes for people who already know the basics. If you are new to Charmed Apache Nifi, start with the :doc:`tutorial </tutorials/index>` first.
 
 License and trademarks
 ----------------------
