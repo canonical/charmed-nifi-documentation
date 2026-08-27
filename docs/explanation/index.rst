@@ -3,8 +3,7 @@
 Explanation
 ===========
 
-Background and concepts to help you understand how Charmed Apache NiFi works and why it
-is built the way it is.
+Background and concepts to help you understand how Charmed Apache NiFi works and why it is built the way it is.
 
 License and trademarks
 ----------------------
@@ -15,4 +14,5 @@ Apache®, Apache NiFi, NiFi™, and their respective logos are either registered
    :maxdepth: 1
 
    architecture-overview
+   charmed-vs-upstream
    nifi-core-concepts

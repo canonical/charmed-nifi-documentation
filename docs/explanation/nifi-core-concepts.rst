@@ -69,5 +69,5 @@ A Flow Registry Client connects Apache Nifi to an external version-control syste
 (GitHub or GitLab). Once configured, you can save flow definitions to a git
 repository and restore or promote them across environments.
 
-Charmed Apache Nifi sets up a Flow Registry Client automatically when you integrate
-with the `git-integrator`_ charm.
+Charmed NiFi sets up a Flow Registry Client automatically when you integrate
+with the `Git Integrator`_ charm.
