@@ -25,7 +25,7 @@ What you'll do
 #. Stop the flow and clean up.
 
 Open the Apache Nifi canvas
---------------------
+---------------------------
 
 Open the Apache Nifi web UI in your browser. You can reach it via the unit IP
 (``http://<unit-ip>:8080/nifi/``) or through an ingress URL if you have one
@@ -39,7 +39,7 @@ You should see the empty canvas.
    :align: center
 
 Add the GenerateFlowFile processor
-------------------------------------
+----------------------------------
 
 **GenerateFlowFile** creates synthetic FlowFiles on a schedule. It is the
 simplest way to produce data without an external source.
@@ -62,7 +62,7 @@ simplest way to produce data without an external source.
 #. Click **Apply**.
 
 Add the LogAttribute processor
----------------------------------
+------------------------------
 
 **LogAttribute** writes every FlowFile's attributes to the Apache Nifi application
 log. It is the simplest way to verify that data is arriving.
@@ -125,4 +125,4 @@ Next steps
 
 * :doc:`/explanation/nifi-core-concepts` - understand the concepts behind
   what you just built.
-* Read the `Apache Apache Nifi documentation`_ for the full processor catalogue.
+* Read the `Apache Nifi documentation`_ for the full processor catalogue.

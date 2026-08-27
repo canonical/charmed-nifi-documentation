@@ -7,7 +7,7 @@ This page explains how Charmed Apache Nifi is structured — from the Kubernetes
 to the data stores — and how the key pieces fit together.
 
 Charmed Apache Nifi deployment
------------------------
+------------------------------
 
 .. image:: ../images/architecture.png
    :alt: Charmed Apache Nifi deployment architecture

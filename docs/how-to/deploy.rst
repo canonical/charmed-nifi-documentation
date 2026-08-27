@@ -1,7 +1,7 @@
 .. _how-to-deploy:
 
 Deploy Charmed Apache Nifi
-===================
+==========================
 
 This guide walks you through deploying Charmed Apache Nifi on Kubernetes using Juju.
 
@@ -20,7 +20,7 @@ Prerequisites
      sudo apt-get install -y jq
 
 Deploy the Apache Nifi charm
----------------------
+----------------------------
 
 .. code-block:: bash
 
@@ -59,7 +59,7 @@ Monitor the deployment with ``juju status`` and wait until the Apache Nifi appli
 shows ``active/idle``.
 
 Access the Apache Nifi UI
-------------------
+-------------------------
 
 The Apache Nifi web UI (the *canvas*) is served on port **8080**:
 

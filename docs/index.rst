@@ -1,5 +1,5 @@
 Charmed Apache NiFi
-============
+===================
 
 Charmed Apache NiFi is a `Juju`_ charm that deploys and operates `Apache NiFi`_ on Kubernetes.
 

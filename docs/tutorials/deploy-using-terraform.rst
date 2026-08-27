@@ -15,7 +15,7 @@ Prerequisites
 * `Terraform CLI`_ (v1.12+).
 
 Clone the Charmed Apache Nifi Solutions repository
--------------------------------------------
+--------------------------------------------------
 
 Clone the ``charmed-nifi-solutions`` repository that contains the Terraform
 module:
@@ -95,7 +95,7 @@ The Apache Nifi charm accepts an object with optional overrides:
 See the `Charmed Apache Nifi Solutions`_ README for the full variable reference.
 
 Access the Apache Nifi UI
-------------------
+-------------------------
 
 After deployment completes, retrieve the Apache Nifi unit IP:
 

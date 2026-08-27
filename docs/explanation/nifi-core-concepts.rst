@@ -1,7 +1,7 @@
 .. _explanation-nifi-core-concepts:
 
 Apache Nifi core concepts
-==================
+=========================
 
 `Apache NiFi`_ is a data logistics platform. You build *flows* on a visual
 canvas by connecting boxes together - no code required. Each box does one
