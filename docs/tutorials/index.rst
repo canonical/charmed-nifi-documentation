@@ -20,6 +20,11 @@ What you need
 * At least **4 GB of free RAM** and **60 GB of free disk** (Apache NiFi keeps three data stores on disk).
 * A terminal and an internet connection.
 
+License and trademarks
+----------------------
+
+Apache®, Apache NiFi, NiFi™, and their respective logos are either registered trademarks or trademarks of the Apache Software Foundation in the United States and/or other countries.
+
 .. toctree::
   :maxdepth: 1
 
