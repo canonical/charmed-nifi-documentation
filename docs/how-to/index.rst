@@ -11,4 +11,5 @@ are new to Charmed NiFi, start with the :doc:`tutorial </tutorials/index>` first
 
    deploy
    integrate/index
-   manage-storage-and-troubleshoot
+   manage-storage
+   troubleshoot
