@@ -7,3 +7,4 @@ Integrate
    :maxdepth: 1
 
    git-integrator
+   ingress
