@@ -3,14 +3,14 @@
 Architecture overview
 =====================
 
-This page explains how Charmed NiFi is structured — from the Kubernetes pod up
+This page explains how Charmed Apache Nifi is structured — from the Kubernetes pod up
 to the data stores — and how the key pieces fit together.
 
-Charmed NiFi deployment
+Charmed Apache Nifi deployment
 -----------------------
 
 .. image:: ../images/architecture.png
-   :alt: Charmed NiFi deployment architecture
+   :alt: Charmed Apache Nifi deployment architecture
    :align: center
 
 A single Juju unit (``nifi-k8s/0``) runs as a Kubernetes pod with two
@@ -18,22 +18,22 @@ containers:
 
 * **Charm container** — runs the Juju agent and charm code. It receives
   configuration and secrets (such as the ``sensitive-props-key``) from the
-  Juju controller and applies them to NiFi.
-* **NiFi container** — runs the NiFi JVM process (managed by Pebble) and
+  Juju controller and applies them to Apache Nifi.
+* **Apache Nifi container** — runs the Apache Nifi JVM process (managed by Pebble) and
   exposes the web UI and API on port ``8080`` at ``/nifi/``.
 
-The browser reaches the NiFi canvas via a port-forward to port 8080. When the
-optional ``git-integrator`` charm is integrated, the NiFi container connects to
+The browser reaches the Apache Nifi canvas via a port-forward to port 8080. When the
+optional ``git-integrator`` charm is integrated, the Apache Nifi container connects to
 a Git repository to store and retrieve versioned flow definitions.
 
 Persistent storage
 ------------------
 
 .. image:: ../images/three-repositories.png
-   :alt: NiFi splits data into three persistent volumes
+   :alt: Apache Nifi splits data into three persistent volumes
    :align: center
 
-NiFi writes data to three separate Juju-managed persistent volumes:
+Apache Nifi writes data to three separate Juju-managed persistent volumes:
 
 .. list-table::
    :header-rows: 1
@@ -54,7 +54,7 @@ NiFi writes data to three separate Juju-managed persistent volumes:
      - Provenance events — the audit trail of every action taken on every
        FlowFile.
 
-Separating these stores lets NiFi manage retention and performance for each
+Separating these stores lets Apache Nifi manage retention and performance for each
 independently.
 
 How data moves: FlowFiles and Connections

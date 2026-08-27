@@ -2,7 +2,7 @@
 .. _Apache NiFi documentation: https://nifi.apache.org/documentation/
 .. _Juju: https://juju.is/
 .. _Ubuntu Code of Conduct: https://ubuntu.com/community/code-of-conduct
-.. _Charmed NiFi on GitHub: https://github.com/canonical/nifi-k8s-operator
+.. _Charmed Apache NiFi on GitHub: https://github.com/canonical/nifi-k8s-operator
 .. _Documentation repository: https://github.com/canonical/charmed-nifi-documentation
 .. _Terraform: https://www.terraform.io/
 .. _Juju Terraform Provider: https://registry.terraform.io/providers/juju/juju/latest/docs

@@ -3,31 +3,31 @@
 Build your first flow
 =====================
 
-This tutorial walks you through building a minimal flow in the NiFi canvas:
+This tutorial walks you through building a minimal flow in the Apache Nifi canvas:
 a **GenerateFlowFile** processor that creates synthetic data and a
 **LogAttribute** processor that logs its metadata. By the end you will have
-seen data move through NiFi and know the basic canvas interactions.
+seen data move through Apache Nifi and know the basic canvas interactions.
 
 .. note::
 
-   This tutorial assumes NiFi is already deployed and the UI is accessible.
+   This tutorial assumes Apache Nifi is already deployed and the UI is accessible.
    If you haven't done that yet, follow the
    :doc:`deploy guide <deploy-using-terraform>` first.
 
 What you'll do
 --------------
 
-#. Open the NiFi canvas.
+#. Open the Apache Nifi canvas.
 #. Add and configure a **GenerateFlowFile** processor.
 #. Add a **LogAttribute** processor.
 #. Connect the two processors.
 #. Start the flow and verify data is moving.
 #. Stop the flow and clean up.
 
-Open the NiFi canvas
+Open the Apache Nifi canvas
 --------------------
 
-Open the NiFi web UI in your browser. You can reach it via the unit IP
+Open the Apache Nifi web UI in your browser. You can reach it via the unit IP
 (``http://<unit-ip>:8080/nifi/``) or through an ingress URL if you have one
 configured. See the :doc:`deploy guide <deploy-using-terraform>` for details
 on accessing the UI.
@@ -35,7 +35,7 @@ on accessing the UI.
 You should see the empty canvas.
 
 .. image:: ../images/nifi-ui.png
-   :alt: Empty NiFi canvas
+   :alt: Empty Apache Nifi canvas
    :align: center
 
 Add the GenerateFlowFile processor
@@ -64,7 +64,7 @@ simplest way to produce data without an external source.
 Add the LogAttribute processor
 ---------------------------------
 
-**LogAttribute** writes every FlowFile's attributes to the NiFi application
+**LogAttribute** writes every FlowFile's attributes to the Apache Nifi application
 log. It is the simplest way to verify that data is arriving.
 
 #. Drag a second **Processor** onto the canvas.
@@ -118,11 +118,11 @@ Stop the flow and clean up
 #. Right-click **GenerateFlowFile** and choose **Delete**.
 #. Right-click **LogAttribute** and choose **Delete**.
 
-The canvas is now empty and NiFi is idle.
+The canvas is now empty and Apache Nifi is idle.
 
 Next steps
 ----------
 
 * :doc:`/explanation/nifi-core-concepts` - understand the concepts behind
   what you just built.
-* Read the `Apache NiFi documentation`_ for the full processor catalogue.
+* Read the `Apache Apache Nifi documentation`_ for the full processor catalogue.
