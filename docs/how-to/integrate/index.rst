@@ -3,6 +3,8 @@
 Integrate
 =========
 
+Guides for connecting Charmed Apache NiFi to other charms and services.
+
 .. toctree::
    :maxdepth: 1
 

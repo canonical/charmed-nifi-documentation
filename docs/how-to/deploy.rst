@@ -1,9 +1,9 @@
 .. _how-to-deploy:
 
-Deploy Charmed NiFi
-===================
+Deploy Charmed Apache Nifi
+==========================
 
-This guide walks you through deploying Charmed NiFi on Kubernetes using Juju.
+This guide walks you through deploying Charmed Apache Nifi on Kubernetes using Juju.
 
 Prerequisites
 -------------
@@ -19,8 +19,8 @@ Prerequisites
 
      sudo apt-get install -y jq
 
-Deploy the NiFi charm
----------------------
+Deploy the Apache Nifi charm
+----------------------------
 
 .. code-block:: bash
 
@@ -29,7 +29,7 @@ Deploy the NiFi charm
 Configure the sensitive properties key
 ---------------------------------------
 
-NiFi uses a *sensitive properties key* to encrypt passwords stored in flow
+Apache Nifi uses a *sensitive properties key* to encrypt passwords stored in flow
 definitions. The charm remains in ``BlockedStatus`` until this key is
 configured.
 
@@ -40,7 +40,7 @@ Generate a random key and store it as a Juju secret:
    juju add-secret nifi-sensitive-key \
      sensitive-props-key="$(openssl rand -base64 32)"
 
-Grant the secret to the NiFi charm and configure it:
+Grant the secret to the Apache Nifi charm and configure it:
 
 .. code-block:: bash
 
@@ -55,13 +55,13 @@ Grant the secret to the NiFi charm and configure it:
 Wait for the deployment
 -----------------------
 
-Monitor the deployment with ``juju status`` and wait until the NiFi application
+Monitor the deployment with ``juju status`` and wait until the Apache Nifi application
 shows ``active/idle``.
 
-Access the NiFi UI
-------------------
+Access the Apache Nifi UI
+-------------------------
 
-The NiFi web UI (the *canvas*) is served on port **8080**:
+The Apache Nifi web UI (the *canvas*) is served on port **8080**:
 
 .. code-block:: bash
 
@@ -75,7 +75,7 @@ Open ``http://<unit-ip>:8080/nifi/`` in your browser.
    ``kubectl port-forward`` to reach the unit.
 
 .. image:: ../images/nifi-ui.png
-   :alt: NiFi Canvas
+   :alt: Apache Nifi Canvas
    :align: center
 
 .. note::
