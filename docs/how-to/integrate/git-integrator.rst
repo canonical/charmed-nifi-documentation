@@ -5,21 +5,21 @@ Integrate with Git Integrator
 
 `Git Integrator`_ is a Juju charm designed to manage and share Git repository
 details and credentials with consumer charms. By integrating it with Charmed
-NiFi, you provide the connection details necessary to register a Git Flow
-Registry Client in NiFi, enabling NiFi to load and version flow definitions
+Apache Nifi, you provide the connection details necessary to register a Git Flow
+Registry Client in Apache Nifi, enabling Apache Nifi to load and version flow definitions
 directly from your remote repository.
 
 .. note::
 
-   NiFi flow registry clients support token-based authentication only.
+   Apache Nifi flow registry clients support token-based authentication only.
    SSH authentication is **not** supported. Configuring git-integrator with
-   ``authentication_method = "ssh"`` will put the NiFi charm in
+   ``authentication_method = "ssh"`` will put the Apache Nifi charm in
    ``BlockedStatus``.
 
 Prerequisites
 -------------
 
-A running Charmed NiFi deployment. If you haven't deployed it yet, follow the
+A running Charmed Apache Nifi deployment. If you haven't deployed it yet, follow the
 :doc:`deploy guide </how-to/deploy>` first.
 
 Deploy the Git Integrator charm
@@ -63,8 +63,8 @@ To track a specific branch (default is ``main``):
 For full configuration options, see the `Git Integrator`_ documentation on
 Charmhub.
 
-Integrate with Charmed NiFi
-----------------------------
+Integrate with Charmed Apache Nifi
+----------------------------------
 
 .. code-block:: bash
 
@@ -76,8 +76,8 @@ Wait for all units to return to ``active/idle``:
 
    juju status --watch 5s
 
-Once active, NiFi automatically creates a Flow Registry Client pointing to the
-configured repository. You can find it in the NiFi UI under
+Once active, Apache Nifi automatically creates a Flow Registry Client pointing to the
+configured repository. You can find it in the Apache Nifi UI under
 **Controller Settings → Registry Clients**.
 
 Remove the integration
