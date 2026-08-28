@@ -3,9 +3,9 @@
 Expose NiFi with ingress
 ========================
 
-By default the NiFi web UI is only reachable inside the Kubernetes cluster. This
-guide gives it an external URL by integrating Charmed Apache NiFi with an ingress
-provider, `Traefik <https://charmhub.io/traefik-k8s>`_.
+By default the Apache NiFi web UI is only reachable inside the Kubernetes
+cluster. This guide gives it an external URL by integrating Charmed Apache NiFi
+with an ingress provider.
 
 When the integration is in place, the charm automatically configures NiFi's proxy
 settings (``nifi.web.proxy.host`` and ``nifi.web.proxy.context.path``) from the
@@ -15,23 +15,34 @@ Prerequisites
 -------------
 
 * A running Charmed Apache NiFi deployment (see :doc:`/how-to/deploy`).
-* A Kubernetes cluster that can give Traefik an external address (a
-  LoadBalancer). On MicroK8s, enable MetalLB with a free range on your network,
-  for example:
+* A Kubernetes cluster with a load balancer, so the ingress provider can obtain
+  an external address. `Canonical Kubernetes
+  <https://documentation.ubuntu.com/canonical-kubernetes/>`_ is recommended; see
+  its `load-balancer guide
+  <https://documentation.ubuntu.com/canonical-kubernetes/latest/snap/howto/networking/default-loadbalancer/>`_
+  for setup.
 
-  .. code-block:: bash
+Choose an ingress provider
+--------------------------
 
-     sudo microk8s enable metallb:10.64.140.43-10.64.140.49
+The charm's ``ingress`` relation works with any charm that provides the
+``ingress`` interface. There are two options:
 
-Deploy Traefik
---------------
+* ``traefik-k8s``: supported today, but the charm is in maintenance mode.
+* ``gateway-api-integrator``: the preferred direction, but not yet supported by
+  Charmed Apache NiFi.
+
+This guide uses ``traefik-k8s``, the option that works today.
+
+Deploy the ingress provider
+---------------------------
 
 .. code-block:: bash
 
    juju deploy traefik-k8s --channel latest/stable --trust
 
-Wait until Traefik is ``active``; it needs an external address before it can
-route traffic:
+Wait until it is ``active``; it needs an external address before it can route
+traffic:
 
 .. code-block:: bash
 
@@ -52,13 +63,13 @@ Wait for both applications to return to ``active/idle``:
 
 .. note::
 
-   Until Traefik publishes a URL, the NiFi charm shows ``Waiting for ingress
-   URL``. This clears once Traefik is ready.
+   Until the ingress provider publishes a URL, the NiFi charm shows ``Waiting for
+   ingress URL``. This clears once the provider is ready.
 
 Open NiFi through the ingress
 -----------------------------
 
-Ask Traefik for NiFi's external URL:
+Ask the ingress provider for NiFi's external URL. With ``traefik-k8s``:
 
 .. code-block:: bash
 
@@ -66,7 +77,7 @@ Ask Traefik for NiFi's external URL:
 
 The result contains a URL for ``nifi-k8s``. Open it in your browser with the
 ``/nifi/`` path appended, for example
-``http://<traefik-address>/<model>-nifi-k8s/nifi/``.
+``http://<external-address>/<model>-nifi-k8s/nifi/``.
 
 .. note::
 
@@ -82,4 +93,4 @@ Remove the integration
    juju remove-relation nifi-k8s traefik-k8s
 
 The charm clears NiFi's proxy settings, and the UI is no longer reachable through
-Traefik.
+the ingress provider.
