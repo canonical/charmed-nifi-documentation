@@ -9,3 +9,4 @@ Guides for connecting Charmed Apache NiFi to other charms and services.
    :maxdepth: 1
 
    git-integrator
+   ingress
