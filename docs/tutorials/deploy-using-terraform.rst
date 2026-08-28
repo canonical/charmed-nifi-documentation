@@ -3,8 +3,8 @@
 Deploy with Terraform
 =====================
 
-This guide shows how to deploy Charmed NiFi using `Terraform`_ and the
-`Juju Terraform Provider`_. Terraform automates the deployment of the NiFi charm
+This guide shows how to deploy Charmed Apache Nifi using `Terraform`_ and the
+`Juju Terraform Provider`_. Terraform automates the deployment of the Apache Nifi charm
 and its configuration in a single, reproducible plan.
 
 Prerequisites
@@ -14,8 +14,8 @@ Prerequisites
   See the :doc:`deploy guide </how-to/deploy>` for setup instructions.
 * `Terraform CLI`_ (v1.12+).
 
-Clone the Charmed NiFi Solutions repository
--------------------------------------------
+Clone the Charmed Apache Nifi Solutions repository
+--------------------------------------------------
 
 Clone the ``charmed-nifi-solutions`` repository that contains the Terraform
 module:
@@ -34,9 +34,9 @@ Create a Juju model:
 
    juju add-model nifi
 
-NiFi uses a *sensitive properties key* to encrypt passwords stored in flow
+Apache Nifi uses a *sensitive properties key* to encrypt passwords stored in flow
 definitions. The Terraform module creates a Juju secret from this value,
-grants it to the NiFi charm, and configures the charm automatically.
+grants it to the Apache Nifi charm, and configures the charm automatically.
 
 Generate a random key:
 
@@ -74,13 +74,13 @@ Initialise and apply:
    terraform init
    terraform apply --var-file="terraform.tfvars"
 
-Monitor the deployment with ``juju status`` and wait until the NiFi application
+Monitor the deployment with ``juju status`` and wait until the Apache Nifi application
 shows ``active/idle``.
 
 Customise charm parameters
 --------------------------
 
-The NiFi charm accepts an object with optional overrides:
+The Apache Nifi charm accepts an object with optional overrides:
 
 .. code-block:: hcl
 
@@ -92,19 +92,19 @@ The NiFi charm accepts an object with optional overrides:
      revision = null                # optional, pin a specific revision
    }
 
-See the `Charmed NiFi Solutions`_ README for the full variable reference.
+See the `Charmed Apache Nifi Solutions`_ README for the full variable reference.
 
-Access the NiFi UI
-------------------
+Access the Apache Nifi UI
+-------------------------
 
-After deployment completes, retrieve the NiFi unit IP:
+After deployment completes, retrieve the Apache Nifi unit IP:
 
 .. code-block:: bash
 
    juju status --format=json \
      | jq -r '.applications["nifi"].units[]."address"'
 
-Open ``http://<unit-ip>:8080/nifi/`` in your browser to reach the NiFi canvas.
+Open ``http://<unit-ip>:8080/nifi/`` in your browser to reach the Apache Nifi canvas.
 
 .. note::
 
@@ -119,11 +119,11 @@ To remove the deployment:
 
    terraform destroy --var-file="terraform.tfvars"
 
-This removes the NiFi application and associated resources from the model.
+This removes the Apache Nifi application and associated resources from the model.
 
 Next steps
 ----------
 
-* Explore the `Charmed NiFi Solutions`_ repository for more information.
+* Explore the `Charmed Apache Nifi Solutions`_ repository for more information.
 
 

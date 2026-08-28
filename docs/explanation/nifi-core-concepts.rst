@@ -1,19 +1,19 @@
 .. _explanation-nifi-core-concepts:
 
-NiFi core concepts
-==================
+Apache Nifi core concepts
+=========================
 
 `Apache NiFi`_ is a data logistics platform. You build *flows* on a visual
 canvas by connecting boxes together - no code required. Each box does one
 thing (read a file, call an API, transform a record) and data moves between
 them automatically.
 
-The following concepts appear throughout the NiFi UI and documentation.
+The following concepts appear throughout the Apache Nifi UI and documentation.
 
 FlowFile
 --------
 
-A FlowFile is the unit of data in NiFi. It has two parts:
+A FlowFile is the unit of data in Apache Nifi. It has two parts:
 
 * **Attributes:** key/value metadata (filename, MIME type, timestamps, custom fields)
 * **Content:** the payload (a file, a JSON document, a database row, etc.)
@@ -27,7 +27,7 @@ Every piece of data that moves through a flow is a FlowFile.
 Processor
 ---------
 
-A Processor is a single step in a flow. NiFi ships with hundreds of built-in
+A Processor is a single step in a flow. Apache Nifi ships with hundreds of built-in
 processors for common tasks: reading from files or queues, calling HTTP
 endpoints, transforming records, writing to databases, and more.
 
@@ -65,11 +65,9 @@ Group can reference. It is configured once and reused everywhere.
 Flow Registry Client
 --------------------
 
-A Flow Registry Client connects NiFi to an external version-control system
+A Flow Registry Client connects Apache Nifi to an external version-control system
 (GitHub or GitLab). Once configured, you can save flow definitions to a git
 repository and restore or promote them across environments.
 
 Charmed NiFi sets up a Flow Registry Client automatically when you integrate
-with the `git-integrator`_ charm.
-
-
+with the `Git Integrator`_ charm.

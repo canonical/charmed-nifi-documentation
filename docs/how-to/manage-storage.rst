@@ -4,7 +4,7 @@ Manage persistent storage
 =========================
 
 Charmed Apache NiFi keeps its data on three Juju storage volumes, each mounted
-into the NiFi container. They survive pod restarts.
+into the Apache NiFi container. They survive pod restarts.
 
 .. list-table::
    :header-rows: 1
@@ -15,10 +15,10 @@ into the NiFi container. They survive pod restarts.
      - What it holds
    * - ``nifi-data``
      - 10G
-     - NiFi's working data, including the flowfile store (in-flight data)
+     - Apache NiFi's working data, including the flowfile store (in-flight data)
    * - ``content-repo``
      - 20G
-     - the bytes of the data flowing through NiFi
+     - the bytes of the data flowing through Apache NiFi
    * - ``provenance-repo``
      - 20G
      - the audit trail of what happened to each item of data
@@ -56,6 +56,6 @@ See how full they are from inside the workload container:
 
 .. important::
 
-   If ``content-repo`` fills up, NiFi stops accepting new data until space is
+   If ``content-repo`` fills up, Apache NiFi stops accepting new data until space is
    freed. Because volumes cannot be resized after deployment, size it generously
    at deploy time.

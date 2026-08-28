@@ -40,13 +40,13 @@ Git provider is using SSH
    Switch the Git provider to HTTPS with a personal access token; see the
    :doc:`Git integration guide <integrate/git-integrator>`.
 
-NiFi rejected the registry settings
+Apache NiFi rejected the registry settings
    ``Failed to configure NiFi flow registry client``
 
    Check the Git provider's repository URL and token, then check the logs
    (below).
 
-NiFi did not accept a change
+Apache NiFi did not accept a change
    ``Failed to write NiFi configuration``, ``Failed to (re)start NiFi service``,
    or ``Failed to rotate nifi.sensitive.props.key``
 
@@ -74,7 +74,7 @@ In progress: transient
 
 These clear on their own; no action is needed unless they persist.
 
-NiFi is starting or the charm is retrying
+Apache NiFi is starting or the charm is retrying
    ``NiFi is starting``, ``Cannot connect to workload container``, or
    ``Failed to read nifi.properties from workload; will retry``
 
@@ -89,12 +89,12 @@ Charm (operator) logs:
 
    juju debug-log --replay --include nifi-k8s/0
 
-NiFi's own application log, inside the workload container:
+Apache NiFi's own application log, inside the workload container:
 
 .. code-block:: bash
 
    juju ssh --container nifi nifi-k8s/0 "tail -n 50 /var/log/nifi/nifi-app.log"
 
 If you're still stuck, open an issue on the `charm's GitHub repository
-<Charmed NiFi on GitHub_>`_ with the output of ``juju status`` and the relevant
+<Charmed Apache NiFi on GitHub_>`_ with the output of ``juju status`` and the relevant
 log lines.
