@@ -15,3 +15,5 @@ Apache®, Apache NiFi, NiFi™, and their respective logos are either registered
 
    deploy
    integrate/index
+   manage-storage
+   troubleshoot

@@ -3,5 +3,6 @@
 Reference
 =========
 
-Technical details you can look up: what the charm supports, how to configure it,
-what its integrations and statuses mean, and where its limits are.
+Technical reference for Charmed Apache NiFi. Dedicated reference pages will be
+added as the charm grows. For now, configuration, integrations, and status
+messages are documented in the :doc:`how-to guides </how-to/index>`.
