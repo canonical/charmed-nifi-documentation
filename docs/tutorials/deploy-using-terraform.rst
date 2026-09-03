@@ -94,6 +94,24 @@ The Apache Nifi charm accepts an object with optional overrides:
 
 See the `Charmed Apache Nifi Solutions`_ README for the full variable reference.
 
+Expose the UI with ingress
+--------------------------
+
+By default the Apache Nifi UI is only reachable inside the Kubernetes cluster.
+Add a ``traefik`` block to ``terraform.tfvars`` and apply again: the module
+deploys Traefik, relates it to Apache Nifi, and the charm configures its own
+proxy settings from the ingress URL.
+
+.. code-block:: hcl
+
+   traefik = {
+     enabled = true
+   }
+
+This needs a Kubernetes cluster with a load balancer, so that Traefik can obtain
+an external address. To set this up by hand instead, or to read about the
+available ingress providers, see :doc:`/how-to/integrate/ingress`.
+
 Access the Apache Nifi UI
 -------------------------
 
@@ -105,6 +123,14 @@ After deployment completes, retrieve the Apache Nifi unit IP:
      | jq -r '.applications["nifi"].units[]."address"'
 
 Open ``http://<unit-ip>:8080/nifi/`` in your browser to reach the Apache Nifi canvas.
+
+If you enabled ingress, ask Traefik for the external URL instead:
+
+.. code-block:: bash
+
+   juju run traefik/0 show-proxied-endpoints
+
+Open the URL it returns with ``/nifi/`` appended.
 
 .. note::
 
@@ -119,7 +145,8 @@ To remove the deployment:
 
    terraform destroy --var-file="terraform.tfvars"
 
-This removes the Apache Nifi application and associated resources from the model.
+This removes the Apache Nifi application, Traefik if it was enabled, and the
+associated resources from the model.
 
 Next steps
 ----------
