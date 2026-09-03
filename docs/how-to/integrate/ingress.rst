@@ -11,6 +11,13 @@ When the integration is in place, the charm automatically configures NiFi's prox
 settings (``nifi.web.proxy.host`` and ``nifi.web.proxy.context.path``) from the
 ingress URL, so there is no NiFi configuration to do by hand.
 
+.. tip::
+
+   If you deploy with the Terraform module, set ``traefik = { enabled = true }``
+   in your ``terraform.tfvars`` rather than following the steps below. The module
+   deploys the ingress provider and establishes the integration for you. See
+   :doc:`/tutorials/deploy-using-terraform`.
+
 Prerequisites
 -------------
 
